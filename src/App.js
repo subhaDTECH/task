@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header';
+import MainFeed from './components/MainFeed';
+import Sidebar from './components/Sidebar';
+import { useState } from 'react';
+import Account  from "./components/Account";
+import Search from "./components/Search";
+import Post from "./components/Post";
+import {BrowserRouter , Routes,Route} from  "react-router-dom";
+import MyApp from "./components/MyApp"
 function App() {
+  const [tab,setTab]=useState(window.location.pathname)
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   <BrowserRouter>
+    <Routes>
+      <Route path="/" exact  element={<MyApp />} />
+      
+     <Route path="/account" element={<Account />}/>
+     <Route path="/search" element={<Search />}/>
+     <Route path="/post" element={<Post />}/>
+     
+     
+  
+    </Routes>
+  </BrowserRouter>
+ 
+    </>
+    
   );
 }
 

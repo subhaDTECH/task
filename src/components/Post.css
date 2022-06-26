@@ -1,0 +1,12 @@
+/* Post css  */
+.post__container{
+    margin:50px auto;
+    /* background-color:red; */
+    width:100%;
+    height:100%;
+    text-align:center;
+ }
+ .post__img{
+    width:100px;
+
+ }

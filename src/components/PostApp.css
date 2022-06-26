@@ -1,0 +1,29 @@
+.post__container{
+    width: 86%;
+    /* background-color: red; */
+    overflow-y: scroll;
+    height: 80vh;
+    margin: 20px;
+}
+.left__box{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 400px;
+}
+.left__box >img{
+    width: 100px;
+    height: 500px;
+   
+    z-index: 1;
+}
+
+.post__container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.post__container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
